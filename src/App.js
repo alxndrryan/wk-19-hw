@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import EmployeeCard from "./components/EmployeeCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Navbar from "./components/Navbar";
 import employees from "./employeeList.json";
 
 class App extends Component {
@@ -20,6 +21,8 @@ class App extends Component {
   // Map over this.state.employees and render a EmployeeCard component for each employee object
   render() {
     return (
+      <div>
+      <Navbar />
       <Wrapper>
         <Title>Employee Directory</Title>
         {this.state.employees.map(employee => (
@@ -35,6 +38,7 @@ class App extends Component {
           />
         ))}
       </Wrapper>
+      </div>
     );
   }
 }
